@@ -1,0 +1,24 @@
+{
+    "name": "hubot-orly",
+    "version": "0.0.1",
+    "description": "Hubot interface to generate Orly book covers",
+    "main": "index.coffee",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/neufeldtech/hubot-orly.git"
+    },
+    "keywords": [
+        "hubot",
+        "hubot-scripts",
+        "hubot-orly"
+    ],
+    "author": "Jordan Neufeld <myjc.niv@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/neufeldtech/hubot-orly/issues"
+    },
+    "homepage": "https://github.com/neufeldtech/hubot-orly#readme"
+}
