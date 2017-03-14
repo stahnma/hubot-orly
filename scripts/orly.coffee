@@ -16,11 +16,13 @@ module.exports = (robot) ->
     guideText = encodeURIComponent(msg.match[2].trim())
     topText = encodeURIComponent(msg.match[3].trim())
     author = encodeURIComponent(msg.match[4].trim())
-    
+
     # Animal range is from 1 to 40
     animal = Math.floor(Math.random() * 40) + 1;
-    
+
     # Color range is from 0 to 16
     color = Math.floor(Math.random() * 17);
-
-    msg.send "https://orly-appstore.herokuapp.com/generate?title=#{title}&guide_text=#{guideText}&top_text=#{topText}&author=#{author}&image_code=#{animal}&theme=#{color}"
+    if msg.robot.adapterName == 'hipchat'
+      msg.send "https://orly-appstore.herokuapp.com/generate?title=#{title}&guide_text=#{guideText}&top_text=#{topText}&author=#{author}&image_code=#{animal}&theme=#{color}&.png"
+    else
+      msg.send "https://orly-appstore.herokuapp.com/generate?title=#{title}&guide_text=#{guideText}&top_text=#{topText}&author=#{author}&image_code=#{animal}&theme=#{color}"
